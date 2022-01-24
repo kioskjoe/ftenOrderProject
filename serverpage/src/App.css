@@ -1,0 +1,32 @@
+*{
+  padding: 0px;
+}
+.topmenubar{
+  width: auto;
+  height: 50px;
+  background-color: #42a5f5;
+  color: aliceblue;
+  min-width: 1500px;
+}
+.innerframe{
+  display: flex;
+
+}
+.frame{
+  display: block;
+  position: relative;;
+}
+.left{
+  display: inline-block;
+  width: 250px;
+  height: auto;
+  background-color: rgb(179, 202, 212);
+}
+
+.right{
+  display: inline-block;
+  padding: 15px;
+  width: auto;
+  height: auto;
+  background-color: rgb(207, 204, 204);
+}

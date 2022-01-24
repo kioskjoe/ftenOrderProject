@@ -1,0 +1,10 @@
+
+{
+
+  "host": "database-kiosk.coteit2t3akh.ap-northeast-2.rds.amazonaws.com",
+  "user":  "admin",
+  "password": "4ten03013346*",
+  "port": "3306",
+  "database": "database-kiosk"
+
+}

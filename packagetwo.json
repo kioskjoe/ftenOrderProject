@@ -1,0 +1,25 @@
+{
+  "name": "serverpage",
+  "version": "1.0.0",
+  "scripts": {
+    "serverpage": "cd serverpage && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\"\"yarn serverpage\"",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemailer": "^6.7.2"
+  },
+  "proxy": "http://localhost:5000/"
+
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
