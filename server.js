@@ -405,12 +405,12 @@ app.delete('/api/mainmenu/:id', (req, res) => {
 });
 
 app.delete('/api/clientdelate/:id', (req, res) => {
-  console.log("kkkkkc4444444444444444kkkkkkkddgfgkkkkkkvvvvvkkkkkkkkkkkkkkkkkkkkkkkk")
+  console.log("kkk99999999999999999999999999999999999kkkkkkkkkkkk")
   let sql = 'UPDATE CLIENTADD SET isDeleted =1 WHERE id = ?';
   let params = [req.params.id];
   connection.query(sql, params,
     (err, rows, fields) => {
-      res.send(rows);
+      res.send(rows);9
     }
   )
 });
