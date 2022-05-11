@@ -16,7 +16,6 @@ class CustomerAdd extends React.Component {
       job: '',
       fileName: ''
     }
-
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
     this.handleFileChange = this.handleFileChange.bind(this)
     this.handleValueChange = this.handleValueChange.bind(this)
@@ -41,6 +40,7 @@ class CustomerAdd extends React.Component {
     })
     window.location.reload();
   }
+  
 
   handleFileChange(e) {
     this.setState({
@@ -62,6 +62,8 @@ class CustomerAdd extends React.Component {
     formData.append('birthday', this.state.birthday)
     formData.append('gender', this.state.gender)
     formData.append('job', this.state.job)
+
+    console.log("dkdkdkdkdkkdkd")
 
   
     const config = {
