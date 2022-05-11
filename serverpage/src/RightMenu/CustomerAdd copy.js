@@ -20,8 +20,8 @@ class CustomerAdd extends React.Component {
     this.addCustomer()
     .then((response) =>{
       console.log(response.data);
+      this.props.stateRefresh();
     })
-
 
     this.setState({
       file: null,
@@ -40,7 +40,6 @@ class CustomerAdd extends React.Component {
       fileName: e.target.value
     })
   }
-
   handleValueChange =(e) => {
     let nextState = {};
     nextState[e.target.name] = e.target.value;
@@ -51,7 +50,7 @@ class CustomerAdd extends React.Component {
     const url ='/api/customer';
     const formData = new FormData();
     formData.append ('image' , this.state.file);
-    formData.append ('NAME' , this.state.NAME);
+    formData.append ('name' , this.state.name);
     formData.append ('birthday' , this.state.birthday);
     formData.append ('gender' , this.state.gender);
     formData.append ('job' , this.state.job);
@@ -68,7 +67,7 @@ class CustomerAdd extends React.Component {
       <form onSubmit={this.handleFormSubmit}> 
         <h1> 고객추가 </h1>
         프로필이미지 : <input type="file" name="file" file={this.state.file} value={this.state.fileName} onChange={this.handleFileChange} /><br />
-        이름 <input type="text" name="NAME" value={this.state.NAME} onChange={this.handleValueChange} /><br />
+        이름 <input type="text" name="name" value={this.state.NAME} onChange={this.handleValueChange} /><br />
         생년월일 : <input type="text" name="birthday" value={this.state.birthday} onChange={this.handleValueChange} /><br />
         성별: <input type="text" name="gender" value={this.state.gender} onChange={this.handleValueChange} /><br />
         직업: <input type="job" name="job" value={this.state.job} onChange={this.handleValueChange} /><br />

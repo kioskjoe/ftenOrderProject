@@ -8,9 +8,9 @@ function TopMenuBar() {
   return (
 
     <div className="topframe">
-      <div className="logomenu">
+      <div >
         <div className="logo4tentouch">
-          <div className="logoimg"><img src={logo} style={{ height: 53, width: 36 }} alt="website logo" /></div>
+          <div style={{ height: 55, width: 65, pddding:20, justifyContent:"center"}} ><img src={logo} style={{ height: 35, width: 55, margin:7}} alt="website logo" /></div>
           <div className="logo">4tentouch</div>
           <TopMenuBarTwo />
         </div>

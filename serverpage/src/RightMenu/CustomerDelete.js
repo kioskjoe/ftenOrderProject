@@ -8,6 +8,7 @@ class CustomerDelete extends React.Component{
       method: 'DELETE'
     });
     this.props.stateRefresh();
+    window.location.reload();
   }
   render(){
     return(

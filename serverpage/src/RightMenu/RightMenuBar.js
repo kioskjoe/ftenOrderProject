@@ -39,28 +39,29 @@ const styles = {
   // }
 }
 
-
-
 class RightMenuBar extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       customer: [],
       completed: 0
     };
   }
 
-  stateRefresh = () => {
-    this.setState({
-      customers: [],
-      completed: 0
-    });
-    fetch('/api/customer')
-      .then(res => res.json())
-      .then(customer => this.setState({customer}, () => console.log('Customers fetched...', customer)));
 
 
-  }
+  // stateRefresh = () => {
+  //   this.setState({
+  //     customer: '',
+  //     completed: 0
+  //   });
+  //   this.callApi()
+  //   .then(res => this.setState({customer: res}))
+  //   .catch(err => console.log(err));
+  // }
+
+
+
 
   componentDidMount() {
     this.timer = setInterval( this.progress, 200);
@@ -80,11 +81,10 @@ class RightMenuBar extends Component {
       <div>
         <p className="hdtext"> 포텐터치 서버 관리 시스템</p>
         <div className="rightmenufirst">
-          <CustomerAdd3 />
+          {/* <CustomerAdd3 />
           <CustomerAdd4 />
-
-          <CustomerAdd stateRefresh={this.stateRefresh}/>
-
+          <CustomerAdd/> */}
+          
           <Paper className={this.props.classes.root}>
             <Table className={this.props.classes.table}>
               <TableHead className={this.props.classes.tablehead}>
@@ -95,20 +95,17 @@ class RightMenuBar extends Component {
                   <TableCell>생년월일</TableCell>
                   <TableCell>성별</TableCell>
                   <TableCell>직업</TableCell>
-                  <TableCell>설정</TableCell>
-
                 </TableRow>
               </TableHead>
   
               <TableBody>
                 {this.state.customer ? this.state.customer.map(c => {
                   return (
-                    <CustomerCom 
-                      stateRefresh={this.stateRefresh}
+                    <CustomerCom
                       key={c.id}
                       id={c.id}
                       img={c.img}
-                      name={c.name}
+                      name={c.NAME}
                       birthday={c.birthday}
                       gender={c.gender}
                       job={c.job}
