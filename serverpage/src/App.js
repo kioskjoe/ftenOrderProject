@@ -18,6 +18,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 // import LoginPage from './Loginften/LoginPage';
 
 function App() {
+  console.log("skskskskskskskssk8888888888888888888")
   return (
 
     <BrowserRouter>
