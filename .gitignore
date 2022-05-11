@@ -3,7 +3,6 @@
 
 /database.json
 # dependencies
-/serverpage
 /node_modules
 /.pnp
 .pnp.js

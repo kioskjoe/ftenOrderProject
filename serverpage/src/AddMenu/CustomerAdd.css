@@ -1,0 +1,62 @@
+.form {
+  background-color: rgb(188, 229, 240);
+  font-size: 20px;
+  padding: 20px;
+}
+
+.titleincustomer{
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #ffffff;
+  background-color: #4cb3e2;
+  padding-left: 25px;
+  height: 40px;
+  border-radius: 5px;
+
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+input {
+  width: 550px;
+  height: 25px;
+  border: 2px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.add{ 
+  background-color: #dbe3f5;
+  color: black;
+  border: none;
+  font-size: 12px;
+  padding: 5px;
+
+}
+
+.btnforcli {
+
+  width: 110px;
+  background-color: #5d78b1;
+  border: none;
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 5px;
+  color: aliceblue;
+  border-radius: 5px;
+  height: 35px;
+}
+
+.btnforcli:hover{
+  background-color: #365088;
+
+}
